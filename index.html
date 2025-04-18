@@ -47,12 +47,87 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <p>Time Delay Diabetes Model | MATH 431 - Mathematical Biology</p>
-      <p>Denver Rental Price Prediction Model | CSCI 303 - Data Science</p>
-      <p>Blood Alcohol Content Dynamics Model | MATH 310 - Mathematical Modeling</p>
-      <p>Enhance Rainfall Forecasting Model | MATH 324 - Statistical Modeling</p>
-    </section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Time Delay Diabetes Model | MATH 431 - Mathematical Biology</h3>
+    <p>This project aims to improve a differential equation model of insulin-glucose regulation in Type 1 Diabetes. I incorporated time-delay differential equations to simulate physiological lags in insulin secretion and glucose absorption.</p>
+    <p><strong>Key Methods:</strong> 
+      <ul>
+        <li>Implemented a glucose-dependent Hill function to represent nonlinear insulin response.</li>
+        <li>Used MATLAB to simulate system dynamics and phase plane analysis.</li>
+      </ul>
+    </p>
+    <p><strong>Key Results:</strong> Successfully replicated the oscillatory dynamics seen in clinical glucose-insulin interactions. Identified areas for model improvement and proposed adjustments to better align with biological data.</p>
+    <h4>Code Snippet:</h4>
+    <pre><code>
+% Differential equation for insulin-glucose regulation
+% Function for glucose absorption
+function dGdt = glucoseDynamics(t, G, I)
+    alpha = 0.05; % Insulin sensitivity
+    beta = 0.1; % Glucose absorption rate
+    dGdt = beta * (I - G);
+end
+    </code></pre>
+    <h4>Visualization:</h4>
+    <img src="diabetes_model.png" alt="Diabetes Model Visualization" width="600">
+
+    <p><a href="https://github.com/yourusername/time-delay-diabetes-model" target="_blank">View on GitHub</a></p>
+  </div>
+
+  <div class="project">
+    <h3>Denver Rental Price Prediction Model | CSCI 303 - Data Science</h3>
+    <p>This project involved predicting rental prices for properties in the Denver Metro area using machine learning. I used features such as square footage, number of bedrooms, and neighborhood data to build predictive models.</p>
+    <p><strong>Key Methods:</strong>
+      <ul>
+        <li>Preprocessed real estate data from Zillow using Python.</li>
+        <li>Built and evaluated models using Linear Regression and Random Forest.</li>
+        <li>Visualized data and model performance with Matplotlib and Seaborn.</li>
+      </ul>
+    </p>
+    <p><strong>Key Results:</strong> Achieved an R-squared of 0.799 with Linear Regression, demonstrating the model's ability to capture rental price trends. The Random Forest model performed slightly less well with an R-squared of 0.654.</p>
+    <h4>Code Snippet:</h4>
+    <pre><code>
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
+
+# Load dataset
+data = pd.read_csv("denver_rentals.csv")
+X = data[['sqft', 'bedrooms', 'bathrooms', 'neighborhood']]
+y = data['price']
+
+# Train a Random Forest model
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X, y)
+
+# Predict and evaluate
+y_pred = model.predict(X)
+mse = mean_squared_error(y, y_pred)
+print("Mean Squared Error:", mse)
+    </code></pre>
+    <h4>Visualization:</h4>
+    <img src="rental_price_plot.png" alt="Rental Price Prediction Plot" width="600">
+
+    <p><a href="https://github.com/yourusername/denver-rental-price-prediction" target="_blank">View on GitHub</a></p>
+  </div>
+
+  <div class="project">
+    <h3>Blood Alcohol Content Dynamics Model | MATH 310 - Mathematical Modeling</h3>
+    <p>This project involved modeling the reduction of blood alcohol content (BAC) over time using two different metabolic pathways: zeroth-order kinetics and Michaelis-Menten elimination kinetics. I compared these models to understand the dynamics of alcohol metabolism.</p>
+    <p><strong>Key Methods:</strong>
+      <ul>
+        <li>Implemented both zeroth-order and Michaelis-Menten kinetics in MATLAB.</li>
+        <li>Performed sensitivity analysis on model parameters like initial BAC and elimination rates.</li>
+        <li>Validated model output against physiological benchmarks.</li>
+      </ul>
+    </p>
+    <p><strong>Key Results:</strong> Identified the more realistic model based on metabolic pathway comparison. Proposed a combined two-phase dynamic system to simulate both absorption and elimination stages more accurately.</p>
+    <h4>Code Snippet:</h4>
+    <pre><code>
+% Zeroth-order kinetics for BAC elimination
+function dBACdt = zeroOrderBAC(t, BAC, k)
+
 
     <section id="awards">
       <h2>Awards</h2>
