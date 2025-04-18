@@ -30,6 +30,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Outline effect for header */
 }
 
 header nav ul {
@@ -47,6 +48,7 @@ header nav ul li a {
   color: #fff;
   font-weight: bold;
   font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Light outline effect for nav links */
 }
 
 header nav ul li a:hover {
@@ -187,5 +189,6 @@ footer a:hover {
     font-size: 1.5rem;
   }
 }
+
 
 
