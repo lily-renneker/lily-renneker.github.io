@@ -50,12 +50,85 @@
   <h2>Projects</h2>
 
   <div class="project">
+    <h3>Data Science Project: Chess Games Analysis Using SQL and Machine Learning</h3>
+    <p>This project analyzed a large dataset of chess games using SQL for data extraction and machine learning to identify patterns and predict game outcomes. I used the Chess.com dataset to perform exploratory data analysis, feature engineering, and classification.</p>
+    <p><strong>Main Programming Languages and Methods:</strong>
+      <ul>
+        <li>Programming Languages: SQL, Python</li>
+        <li>Methods: Data extraction with SQL, machine learning classification (Logistic Regression, SVM), feature engineering, exploratory data analysis, data visualization (Matplotlib, Seaborn)</li>
+      </ul>
+    </p>
+    <p><strong>Key Results:</strong> The model achieved a prediction accuracy of 85%. Player rating and move complexity were identified as the most significant predictors of game outcomes.</p>
+    <h4>Code Snippet:</h4>
+    <pre><code>
+-- SQL query to extract chess game data
+SELECT game_id, player_rating, move_count, outcome
+FROM chess_games
+WHERE game_date BETWEEN '2020-01-01' AND '2021-01-01';
+    </code></pre>
+    <h4>Visualization:</h4>
+    <img src="images/chess_games_analysis.png" alt="Chess Games Analysis" width="600">
+
+    <p><a href="https://github.com/yourusername/chess-games-analysis" target="_blank">View on GitHub</a></p>
+  </div>
+
+  <div class="project">
+    <h3>Analysis of Dynamics and Chaos in the Rose-Hindmarsh Model for Seizures</h3>
+    <p>This project focuses on the analysis of the Rose-Hindmarsh model, a well-known mathematical model for neuronal dynamics, in the context of seizure activity. I used bifurcation analysis to explore chaotic behavior and identify threshold values where the system transitions from regular oscillations to chaotic seizures.</p>
+    <p><strong>Main Programming Languages and Methods:</strong>
+      <ul>
+        <li>Programming Languages: MATLAB</li>
+        <li>Methods: Bifurcation analysis, numerical simulations, chaos theory, phase space analysis, Poincaré maps</li>
+      </ul>
+    </p>
+    <p><strong>Key Results:</strong> The system showed sensitive dependence on initial conditions, characteristic of chaotic systems. Identified key parameter ranges where the system displayed seizure-like activity, providing insights into seizure triggers.</p>
+    <h4>Code Snippet:</h4>
+    <pre><code>
+% Rose-Hindmarsh model for seizure dynamics
+function dydt = roseHindmarsh(t, y, a, b, c)
+    dydt = [y(2) - a*y(1)^3 + b*y(1)^2 - c*y(3);
+            1 - y(1)^2 - a*y(2);
+            c*y(1) - b*y(3)];
+end
+    </code></pre>
+    <h4>Visualization:</h4>
+    <img src="images/rose_hindmarsh_bifurcation.png" alt="Rose-Hindmarsh Bifurcation Diagram" width="600">
+
+    <p><a href="https://github.com/yourusername/rose-hindmarsh-seizure-analysis" target="_blank">View on GitHub</a></p>
+  </div>
+
+  <div class="project">
+    <h3>Analysis of the Stommel Box Model for Climate Change and Gulf Stream Reversal</h3>
+    <p>This project involved analyzing the Stommel Box model, a simplified model of ocean circulation, to study the impacts of climate change on the Gulf Stream and its potential for reversal under various scenarios.</p>
+    <p><strong>Main Programming Languages and Methods:</strong>
+      <ul>
+        <li>Programming Languages: MATLAB</li>
+        <li>Methods: Differential equations, bifurcation analysis, phase space analysis, parameter sensitivity analysis</li>
+      </ul>
+    </p>
+    <p><strong>Key Results:</strong> Found parameter values at which the Gulf Stream could undergo reversal, highlighting the importance of temperature and salinity gradients in ocean circulation.</p>
+    <h4>Code Snippet:</h4>
+    <pre><code>
+% Stommel Box model equations
+function dydt = stommelBox(t, y, a, b, c)
+    dydt = [a*y(1) - b*y(2) - c*y(3);
+            b*y(1) - a*y(2) - c*y(3);
+            c*y(1) + c*y(2) - a*y(3)];
+end
+    </code></pre>
+    <h4>Visualization:</h4>
+    <img src="images/stommel_box_simulation.png" alt="Stommel Box Model Simulation" width="600">
+
+    <p><a href="https://github.com/yourusername/stommel-box-climate-analysis" target="_blank">View on GitHub</a></p>
+  </div>
+
+  <div class="project">
     <h3>Time Delay Diabetes Model | MATH 431 - Mathematical Biology</h3>
     <p>This project aims to improve a differential equation model of insulin-glucose regulation in Type 1 Diabetes. I incorporated time-delay differential equations to simulate physiological lags in insulin secretion and glucose absorption.</p>
-    <p><strong>Key Methods:</strong> 
+    <p><strong>Main Programming Languages and Methods:</strong> 
       <ul>
-        <li>Implemented a glucose-dependent Hill function to represent nonlinear insulin response.</li>
-        <li>Used MATLAB to simulate system dynamics and phase plane analysis.</li>
+        <li>Programming Languages: MATLAB</li>
+        <li>Methods: Numerical simulations, phase plane analysis, time-delay differential equations, nonlinear insulin response modeling with Hill function</li>
       </ul>
     </p>
     <p><strong>Key Results:</strong> Successfully replicated the oscillatory dynamics seen in clinical glucose-insulin interactions. Identified areas for model improvement and proposed adjustments to better align with biological data.</p>
@@ -70,7 +143,7 @@ function dGdt = glucoseDynamics(t, G, I)
 end
     </code></pre>
     <h4>Visualization:</h4>
-    <img src="diabetes_model.png" alt="Diabetes Model Visualization" width="600">
+    <img src="images/diabetes_model.png" alt="Diabetes Model Visualization" width="600">
 
     <p><a href="https://github.com/yourusername/time-delay-diabetes-model" target="_blank">View on GitHub</a></p>
   </div>
@@ -78,11 +151,10 @@ end
   <div class="project">
     <h3>Denver Rental Price Prediction Model | CSCI 303 - Data Science</h3>
     <p>This project involved predicting rental prices for properties in the Denver Metro area using machine learning. I used features such as square footage, number of bedrooms, and neighborhood data to build predictive models.</p>
-    <p><strong>Key Methods:</strong>
+    <p><strong>Main Programming Languages and Methods:</strong>
       <ul>
-        <li>Preprocessed real estate data from Zillow using Python.</li>
-        <li>Built and evaluated models using Linear Regression and Random Forest.</li>
-        <li>Visualized data and model performance with Matplotlib and Seaborn.</li>
+        <li>Programming Languages: Python</li>
+        <li>Methods: Data preprocessing, Linear Regression, Random Forest Regression, feature extraction, data visualization (Matplotlib, Seaborn)</li>
       </ul>
     </p>
     <p><strong>Key Results:</strong> Achieved an R-squared of 0.799 with Linear Regression, demonstrating the model's ability to capture rental price trends. The Random Forest model performed slightly less well with an R-squared of 0.654.</p>
@@ -107,45 +179,18 @@ mse = mean_squared_error(y, y_pred)
 print("Mean Squared Error:", mse)
     </code></pre>
     <h4>Visualization:</h4>
-    <img src="datascience.png" alt="Rental Price Prediction Plot" width="600">
-    <img src="datascience2.png" alt="Rental Price Prediction Plot" width="600">
-    <img src="datascience3.png" alt="Rental Price Prediction Plot" width="600">
+    <img src="images/rental_price_plot.png" alt="Rental Price Prediction Plot" width="600">
 
     <p><a href="https://github.com/yourusername/denver-rental-price-prediction" target="_blank">View on GitHub</a></p>
   </div>
 
   <div class="project">
-    <h3>Blood Alcohol Content Dynamics Model | MATH 310 - Mathematical Modeling</h3>
-    <p>This project involved modeling the reduction of blood alcohol content (BAC) over time using two different metabolic pathways: zeroth-order kinetics and Michaelis-Menten elimination kinetics. I compared these models to understand the dynamics of alcohol metabolism.</p>
-    <p><strong>Key Methods:</strong>
-      <ul>
-        <li>Implemented both zeroth-order and Michaelis-Menten kinetics in MATLAB.</li>
-        <li>Performed sensitivity analysis on model parameters like initial BAC and elimination rates.</li>
-        <li>Validated model output against physiological benchmarks.</li>
-      </ul>
-    </p>
-    <p><strong>Key Results:</strong> Identified the more realistic model based on metabolic pathway comparison. Proposed a combined two-phase dynamic system to simulate both absorption and elimination stages more accurately.</p>
-    <h4>Code Snippet:</h4>
-    <pre><code>
-% Zeroth-order kinetics for BAC elimination
-function dBACdt = zeroOrderBAC(t, BAC, k)
-    dBACdt = -k; % Constant rate of alcohol elimination
-end
-    </code></pre>
-    <h4>Visualization:</h4>
-    <img src="bac_model_plot.png" alt="BAC Model Visualization" width="600">
-
-    <p><a href="https://github.com/yourusername/bac-dynamics-model" target="_blank">View on GitHub</a></p>
-  </div>
-
-  <div class="project">
     <h3>Enhance Rainfall Forecasting Model | MATH 324 - Statistical Modeling</h3>
     <p>This project aimed to predict the likelihood of rainfall using logistic regression. I worked with a dataset of weather observations from Australia, focusing on optimizing model performance using feature engineering and multicollinearity diagnostics.</p>
-    <p><strong>Key Methods:</strong>
+    <p><strong>Main Programming Languages and Methods:</strong>
       <ul>
-        <li>Implemented logistic regression in R to predict rainfall.</li>
-        <li>Refined models using stepwise regression and Bayesian Information Criterion (BIC) for feature selection.</li>
-        <li>Evaluated model performance using Brier Scores and confusion matrices.</li>
+        <li>Programming Languages: R</li>
+        <li>Methods: Logistic regression, stepwise regression, feature engineering, multicollinearity diagnostics, Bayesian Information Criterion (BIC)</li>
       </ul>
     </p>
     <p><strong>Key Results:</strong> Tailored models to specific locations, identifying significant regional variation in model accuracy, with Perth showing a much higher predictive capability than Alice Springs.</p>
@@ -156,90 +201,53 @@ rain_model <- glm(rain ~ temperature + humidity + wind_speed, family = binomial(
 summary(rain_model)
     </code></pre>
     <h4>Visualization:</h4>
-    <img src="rainfall_model_plot.png" alt="Rainfall Forecasting Visualization" width="600">
+    <img src="images/rainfall_model_plot.png" alt="Rainfall Forecasting Visualization" width="600">
 
     <p><a href="https://github.com/yourusername/rainfall-forecasting" target="_blank">View on GitHub</a></p>
   </div>
 
-  <!-- New Projects Below -->
-
+  <!-- Add your Cat-themed Text Adventure Game project here -->
   <div class="project">
-    <h3>Analysis of Dynamics and Chaos in the Rose-Hindmarsh Model for Seizures</h3>
-    <p>This project focuses on the analysis of the Rose-Hindmarsh model, a well-known mathematical model for neuronal dynamics, in the context of seizure activity. I used bifurcation analysis to explore chaotic behavior and identify threshold values where the system transitions from regular oscillations to chaotic seizures.</p>
-    <p><strong>Key Methods:</strong>
+    <h3>Cat Themed Text-Adventure Game in C++</h3>
+    <p>This project involved creating a text-based adventure game in C++ where players take on the role of a cat exploring different scenarios, solving puzzles, and encountering various challenges. The game logic includes multiple paths and decision points.</p>
+    <p><strong>Main Programming Languages and Methods:</strong>
       <ul>
-        <li>Analyzed the model using numerical simulations and bifurcation analysis in MATLAB.</li>
-        <li>Explored chaos dynamics and the impact of different parameters on seizure thresholds.</li>
-        <li>Visualized phase space diagrams and Poincaré maps to highlight chaotic regions.</li>
+        <li>Programming Languages: C++</li>
+        <li>Methods: Object-oriented programming, game logic development, console input/output, decision trees</li>
       </ul>
     </p>
-    <p><strong>Key Results:</strong> The system showed sensitive dependence on initial conditions, characteristic of chaotic systems. Identified key parameter ranges where the system displayed seizure-like activity, providing insights into seizure triggers.</p>
+    <p><strong>Key Results:</strong> Developed an interactive and engaging text-adventure game that incorporates basic game mechanics like inventory management and scenario-based decision-making.</p>
     <h4>Code Snippet:</h4>
     <pre><code>
-% Rose-Hindmarsh model for seizure dynamics
-function dydt = roseHindmarsh(t, y, a, b, c)
-    dydt = [y(2) - a*y(1)^3 + b*y(1)^2 - c*y(3);
-            1 - y(1)^2 - a*y(2);
-            c*y(1) - b*y(3)];
-end
+// Simple C++ code for a text-based adventure
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Welcome to the Cat Adventure!" << endl;
+    cout << "You are in a room with a mouse. What do you want to do?" << endl;
+    cout << "1. Chase the mouse" << endl;
+    cout << "2. Sit and watch" << endl;
+
+    int choice;
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "You caught the mouse! You win!" << endl;
+    } else {
+        cout << "You are lazy. Game over." << endl;
+    }
+    return 0;
+}
     </code></pre>
     <h4>Visualization:</h4>
-    <img src="rose_hindmarsh_bifurcation.png" alt="Rose-Hindmarsh Bifurcation Diagram" width="600">
+    <img src="images/cat_adventure_game.png" alt="Cat Adventure Game" width="600">
 
-    <p><a href="https://github.com/yourusername/rose-hindmarsh-seizure-analysis" target="_blank">View on GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h3>Data Science Project: Chess Games Analysis Using SQL and Machine Learning</h3>
-    <p>This project analyzed a large dataset of chess games using SQL for data extraction and machine learning to identify patterns and predict game outcomes. I used the Chess.com dataset to perform exploratory data analysis, feature engineering, and classification.</p>
-    <p><strong>Key Methods:</strong>
-      <ul>
-        <li>Extracted data from a SQL database containing millions of chess games.</li>
-        <li>Used machine learning algorithms like Logistic Regression and SVM to classify game outcomes (win, loss, draw).</li>
-        <li>Visualized important features such as move counts and player ratings that influenced the game outcomes.</li>
-      </ul>
-    </p>
-    <p><strong>Key Results:</strong> The model achieved a prediction accuracy of 85%. Player rating and move complexity were identified as the most significant predictors of game outcomes.</p>
-    <h4>Code Snippet:</h4>
-    <pre><code>
--- SQL query to extract chess game data
-SELECT game_id, player_rating, move_count, outcome
-FROM chess_games
-WHERE game_date BETWEEN '2020-01-01' AND '2021-01-01';
-    </code></pre>
-    <h4>Visualization:</h4>
-    <img src="chess_games_analysis.png" alt="Chess Games Analysis" width="600">
-
-    <p><a href="https://github.com/yourusername/chess-games-analysis" target="_blank">View on GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h3>Analysis of the Stommel Box Model for Climate Change and Gulf Stream Reversal</h3>
-    <p>This project involved analyzing the Stommel Box model, a simplified model of ocean circulation, to study the impacts of climate change on the Gulf Stream and its potential for reversal under various scenarios.</p>
-    <p><strong>Key Methods:</strong>
-      <ul>
-        <li>Implemented the Stommel Box model using differential equations in MATLAB.</li>
-        <li>Performed simulations with varying parameters such as temperature and salinity to study the reversal of the Gulf Stream.</li>
-        <li>Explored bifurcations and stability conditions using numerical methods and phase space analysis.</li>
-      </ul>
-    </p>
-    <p><strong>Key Results:</strong> Found parameter values at which the Gulf Stream could undergo reversal, highlighting the importance of temperature and salinity gradients in ocean circulation.</p>
-    <h4>Code Snippet:</h4>
-    <pre><code>
-% Stommel Box model equations
-function dydt = stommelBox(t, y, a, b, c)
-    dydt = [a*y(1) - b*y(2) - c*y(3);
-            b*y(1) - a*y(2) - c*y(3);
-            c*y(1) + c*y(2) - a*y(3)];
-end
-    </code></pre>
-    <h4>Visualization:</h4>
-    <img src="stommel_box_simulation.png" alt="Stommel Box Model Simulation" width="600">
-
-    <p><a href="https://github.com/yourusername/stommel-box-climate-analysis" target="_blank">View on GitHub</a></p>
+    <p><a href="https://github.com/yourusername/cat-adventure-game" target="_blank">View on GitHub</a></p>
   </div>
 
 </section>
+
 
 
     <section id="awards">
