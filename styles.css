@@ -191,22 +191,25 @@ footer a:hover {
 }
 
 /* About Section */
-.about-container {
+-.about-container {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 30px;
+  flex-wrap: wrap; /* Ensures mobile responsiveness */
+  padding: 20px;
 }
 
 .about-image img {
   max-width: 250px;
   height: auto;
-  border-radius: 12px; /* Optional: makes the image edges rounded */
+  border-radius: 12px; /* Optional: softens the image edges */
+  object-fit: cover;
 }
 
 .about-text {
   flex: 1;
   min-width: 300px;
 }
+
 
 
