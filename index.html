@@ -73,24 +73,46 @@
   <h2>Projects</h2>
 
   <div class="project">
-    <h3>Data Science Project: Chess Games Analysis Using SQL and Machine Learning</h3>
-    <p>This project analyzed a large dataset of chess games using SQL for data extraction and machine learning to identify patterns and predict game outcomes. I used the Chess.com dataset to perform exploratory data analysis, feature engineering, and classification.</p>
-    <p><strong>Main Programming Languages and Methods:</strong>
-      <ul>
-        <li>Programming Languages: SQL, Python</li>
-        <li>Methods: Data extraction with SQL, machine learning classification (Logistic Regression, SVM), feature engineering, exploratory data analysis, data visualization (Matplotlib, Seaborn)</li>
-      </ul>
-    </p>
-    <p><strong>Key Results:</strong> The model achieved a prediction accuracy of 85%. Player rating and move complexity were identified as the most significant predictors of game outcomes.</p>
-    <h4>Code Snippet:</h4>
-    <pre><code>
--- SQL query to extract chess game data
-SELECT game_id, player_rating, move_count, outcome
-FROM chess_games
-WHERE game_date BETWEEN '2020-01-01' AND '2021-01-01';
-    </code></pre>
-    <h4>Visualization:</h4>
-    <img src="images/chess_games_analysis.png" alt="Chess Games Analysis" width="600">
+    <h3>Data Science & Machine Learning Project: Statistical Analysis of Chess Games</h3>
+<p>This project explored over 20,000 chess games from the Lichess dataset to analyze gameplay trends, optimize data storage with SQL, and develop machine learning models to predict game outcomes. It was completed in collaboration with Sierra Bohren and Emmy Dupree-Henry for the CSCI 403 course.</p>
+
+<p><strong>Project Scope:</strong> We designed a normalized PostgreSQL database schema, cleaned and queried complex data, and built two predictive models — a feedforward neural network and a random forest classifier — to forecast game results based on player ratings, number of turns, and opening played.</p>
+
+<p><strong>Key Tools and Methods:</strong></p>
+<ul>
+  <li><strong>Languages & Tools:</strong> SQL, Python, R, PostgreSQL, scikit-learn, tidyverse</li>
+  <li><strong>Techniques:</strong> Database normalization (BCNF), data cleaning, EDA, neural networks, random forest classification, model evaluation (accuracy, ROC AUC), one-hot encoding</li>
+</ul>
+
+<p><strong>Key Findings:</strong></p>
+<ul>
+  <li>Random Forest model achieved 68.6% accuracy, outperforming the neural network (64.4%)</li>
+  <li>Player rating and game opening were the most important predictors of game outcome</li>
+  <li>Draws were the most difficult to predict, highlighting limitations in available features</li>
+</ul>
+
+<p><strong>Highlighted SQL Query:</strong> Determining the most popular openings used over 100 times:</p>
+<pre><code>
+WITH opening_counts AS (
+  SELECT opening_name, COUNT(*) AS count
+  FROM chess
+  GROUP BY opening_name
+)
+SELECT opening_name, count
+FROM opening_counts
+WHERE count > 100;
+</code></pre>
+
+<h4>Visualizations:</h4>
+<ul>
+  <li>Factor importance plot for random forest classification</li>
+  <li>Confusion matrix heatmap</li>
+  <li>Bar charts comparing average turns and win rates by opening</li>
+</ul>
+<img src="images/chess_games_analysis.png" alt="Chess Game Feature Importance" width="600" />
+
+<p><strong>Conclusion:</strong> This project demonstrated how structured data engineering and machine learning can reveal underlying patterns in chess strategy. While predictive performance was moderate, the project laid the groundwork for more advanced modeling, such as incorporating player history or move sequences in future iterations.</p>
+
 
     <p><a href="https://github.com/yourusername/chess-games-analysis" target="_blank">View on GitHub</a></p>
   </div>
