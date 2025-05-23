@@ -1,15 +1,15 @@
 /* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #e8f0f2;
+  color: #2c3e50;
 }
 
 a {
-  color: #6c5b7b;
+  color: #2980b9;
   text-decoration: none;
 }
 
@@ -18,19 +18,18 @@ a:hover {
 }
 
 header {
-  background-color: #ffefff;
-  color: #6c5b7b;
+  background-color: #2c3e50;
+  color: #ecf0f1;
   padding: 30px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid #6c5b7b;
+  border-bottom: 4px solid #2980b9;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Outline effect for header */
+  font-size: 2.5rem;
 }
 
 header nav ul {
@@ -45,14 +44,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: ##6c5b7b;
+  color: #ecf0f1;
   font-weight: bold;
   font-size: 16px;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Light outline effect for nav links */
 }
 
 header nav ul li a:hover {
-  color: #333;
+  color: #1abc9c;
 }
 
 main {
@@ -67,9 +65,9 @@ section {
 }
 
 section h2 {
-  font-size: 2rem;
-  color: #6c5b7b;
-  border-bottom: 2px solid #f7aef8;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #1abc9c;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -86,42 +84,30 @@ section h2 {
 
 .project:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .project h3 {
-  font-size: 1.75rem;
-  color: #6c5b7b;
-  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 10px;
 }
 
-.project p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-}
-
+.project p,
 .project ul {
-  list-style-type: square;
-  margin-left: 20px;
-  color: #555;
-}
-
-.project h4 {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: #6c5b7b;
+  font-size: 1rem;
+  color: #34495e;
 }
 
 .project pre {
-  background-color: #f3e9e1;
+  background-color: #ecf0f1;
   padding: 15px;
   border-radius: 8px;
   overflow-x: auto;
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.9rem;
   margin-top: 10px;
-  border: 1px solid #d1b3c4;
+  border: 1px solid #bdc3c7;
 }
 
 .project img {
@@ -137,33 +123,33 @@ section h2 {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background-color: #f7aef8;
+  background-color: #1abc9c;
   color: #fff;
   border-radius: 5px;
-  text-align: center;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .project a:hover {
-  background-color: #d29be3;
+  background-color: #16a085;
 }
 
 /* Footer Styling */
 footer {
-  background-color: #f7aef8;
-  color: #fff;
+  background-color: #2c3e50;
+  color: #ecf0f1;
   text-align: center;
   padding: 20px 0;
   margin-top: 40px;
 }
 
 footer a {
-  color: #6c5b7b;
+  color: #1abc9c;
   font-weight: bold;
 }
 
 footer a:hover {
-  color: #fff;
+  color: #ecf0f1;
 }
 
 /* Responsive Styles */
@@ -191,18 +177,18 @@ footer a:hover {
 }
 
 /* About Section */
--.about-container {
+.about-container {
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  flex-wrap: wrap; /* Ensures mobile responsiveness */
+  flex-wrap: wrap;
   padding: 20px;
 }
 
 .about-image img {
   max-width: 250px;
   height: auto;
-  border-radius: 12px; /* Optional: softens the image edges */
+  border-radius: 12px;
   object-fit: cover;
 }
 
@@ -210,6 +196,7 @@ footer a:hover {
   flex: 1;
   min-width: 300px;
 }
+
 
 
 
