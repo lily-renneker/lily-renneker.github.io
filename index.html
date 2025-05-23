@@ -58,76 +58,69 @@
 </section>
 
 
-    <section id="experience">
-      <p><strong>Virtuosity Dance Centre | Costume Coordinator and Manager</strong></p>
-  <p>August 2024 – Present | Golden, Colorado</p>
-  <ul>
-    <li>
-      Managed technical and operational aspects of costume logistics for over 30 classes and 200+ dancers, supporting recital planning and inventory optimization across seasonal productions.
-    </li>
-
-    <li>
-      Tasked with designing a scalable, centralized tracking system to streamline costume management, reduce redundant purchases, and improve data accuracy for inventory and class assignments.
-    </li>
-
-    <li>
-      Built a relational <strong>PostgreSQL database</strong> to manage costumes, dancers, assignments, and event metadata. Enforced foreign key constraints and indexing to support efficient queries and prevent assignment conflicts.
-    </li>
-
-    <li>
-      Developed Python scripts using <code>psycopg2</code> and <code>pandas</code> to automate data entry from spreadsheets, validate input consistency, generate costume-to-class mappings, and update sizing distributions.
-    </li>
-
-    <li>
-      Created interactive dashboards to display inventory health, usage trends, and recommended purchase lists based on class-level sizing shortages and reuse frequency. Built UI components for filtering by theme, size, and dancer group.
-    </li>
-
-    <li>
-      Integrated historical usage analysis to recommend reassignments based on sizing alignment, previous wear counts, and upcoming recital themes, enabling dynamic reuse planning.
-    </li>
-
-    <li>
-      Authored internal documentation and led training for instructors and staff on how to use the new system, improving data consistency and enabling smooth transitions between recital seasons.
-    </li>
-
-    <li>
-      The system reduced over-purchasing by approximately <strong>30%</strong>, increased reuse efficiency, and provided studio leadership with real-time data to support budgeting and procurement.
-    </li>
-
-    <li>
-      Enhanced communication with parents and staff by producing automated reports summarizing assigned costumes, outstanding sizing needs, and estimated delivery timelines.
-    </li>
-  </ul>
+ <section id="experience">
   <h2>Experience</h2>
-  <p><strong>RSM US LLP | Managed Application Services Intern</strong></p>
-  <p>June 2024 – August 2024</p>
-  <ul>
-    <li>
-      Developed and deployed an <strong>end-to-end batch job tracking system</strong> in Microsoft Dynamics 365 (D365 F&O), leveraging <strong>X++</strong> to query and log batch job metadata (e.g., status, start/finish times, errors, retry counts) into a custom table. Implemented a scheduled service job to monitor batch lifecycle and automatically flag failed jobs using <code>BatchHeader</code> and <code>BatchJobHistory</code> tables.
-    </li>
 
-    <li>
-      Designed a <strong>low-code monitoring dashboard in Power Apps</strong> connected to the D365 database via the Dataverse connector. Used canvas app components to display live job status, filter by company, module, or status, and provided drill-down capabilities with embedded job detail cards. Integrated <strong>Power Automate flows</strong> to trigger Microsoft Teams alerts for critical job failures, and auto-generate job summary reports every Monday at 9 AM.
-    </li>
+  <!-- Virtuosity Dance Centre Experience -->
+  <div class="project">
+    <h3>Virtuosity Dance Centre | Costume Coordinator and Manager</h3>
+    <p><em>August 2024 – Present | Golden, Colorado</em></p>
 
-    <li>
-      Integrated <strong>Microsoft Copilot (AI GPT engine)</strong> into Microsoft Teams via Graph API and Power Automate to create a conversational bot that synthesized weekly development logs. Used SharePoint list data and Power Automate actions to compile batch metrics, then passed summarized output to Copilot for language refinement. Automated delivery to key stakeholders via Teams chat and adaptive cards.
-    </li>
+    <h4>Operational Management</h4>
+    <ul>
+      <li>Oversaw costume logistics for 30+ dance classes and 200+ dancers, aligning costumes with class themes, sizes, and reuse priorities.</li>
+      <li>Standardized data entry processes and led staff training, streamlining seasonal recital planning and costume assignments.</li>
+    </ul>
 
-    <li>
-      Conducted a <strong>D365 customization case study</strong> for a manufacturing client needing advanced inventory tracking. Configured a custom form using D365 Extension Framework, implemented form logic using <strong>X++ event handlers</strong>, and created a new menu item button to trigger workflows based on inventory threshold rules. Documented business requirements, customization steps, and impact analysis in a client-ready report.
-    </li>
+    <h4>Database and Automation</h4>
+    <ul>
+      <li>Built a relational <strong>PostgreSQL database</strong> to track costumes, dancer assignments, inventory status, and historical usage.</li>
+      <li>Developed Python scripts with <code>psycopg2</code> and <code>pandas</code> to automate spreadsheet imports, validate entries, and manage class-to-costume mappings.</li>
+    </ul>
 
-    <li>
-      Led a <strong>competitive strategy case competition</strong> on consumer behavior analytics using Power BI and Excel. Created dashboards with sales trends, demographic segmentation, and pricing sensitivity using DAX queries and slicers. Delivered insights to RSM leadership, winning top team out of 10+ entries.
-    </li>
+    <h4>Dashboards and Decision Support</h4>
+    <ul>
+      <li>Created interactive dashboards using <strong>Plotly Dash</strong> to visualize costume availability, reuse metrics, and shortage alerts by size and class.</li>
+      <li>Implemented logic for dynamic reuse suggestions based on previous wear counts, sizing compatibility, and upcoming recital needs.</li>
+    </ul>
 
-    <li>
-      Automated several workflows in the <strong>D365 Finance and Supply Chain environment</strong> using <strong>Power Platform stack</strong> (Power Apps, Power Automate, Power BI). Projects included vendor payment approval routing, invoice import validation, and dynamic email generation using Exchange connector and conditional expressions.
-    </li>
-  </ul>
+    <h4>Impact</h4>
+    <ul>
+      <li>Reduced over-purchasing by approximately <strong>30%</strong> through improved reuse tracking and sizing analysis.</li>
+      <li>Improved communication with staff and parents through automated reports on assignments and inventory status.</li>
+    </ul>
+  </div>
 
+  <!-- RSM Experience -->
+  <div class="project">
+    <h3>RSM US LLP | Managed Application Services Intern</h3>
+    <p><em>June 2024 – August 2024</em></p>
+
+    <h4>Systems Design & Automation</h4>
+    <ul>
+      <li>Developed a batch job tracker in <strong>D365 Finance & Operations</strong> using <strong>X++</strong> to monitor job status, retry logic, and error logging via <code>BatchHeader</code> and <code>BatchJobHistory</code> tables.</li>
+      <li>Built a Power Apps dashboard connected to Dataverse, enabling real-time monitoring and filtering by job type, company, and status.</li>
+    </ul>
+
+    <h4>AI Integration & Reporting</h4>
+    <ul>
+      <li>Integrated <strong>Microsoft Copilot</strong> into Microsoft Teams using Power Automate and Graph API to post weekly development summaries using SharePoint data and natural language generation.</li>
+      <li>Automated job summary reports and critical failure alerts delivered as adaptive cards in Teams.</li>
+    </ul>
+
+    <h4>Customization and Case Study</h4>
+    <ul>
+      <li>Conducted a D365 customization case study for a manufacturing client needing advanced inventory controls. Built custom forms, menu buttons, and workflows using X++ and D365 Extension Framework.</li>
+    </ul>
+
+    <h4>Competitive Project & Workflow Optimization</h4>
+    <ul>
+      <li>Won a company-wide case competition analyzing consumer behavior in the food & beverage sector using Power BI and Excel (DAX queries, slicers, segmentation).</li>
+      <li>Automated workflows in D365 using Power Platform, including invoice validation, vendor payment approval, and Exchange-based email notifications.</li>
+    </ul>
+  </div>
 </section>
+
 
 
     <section id="projects">
